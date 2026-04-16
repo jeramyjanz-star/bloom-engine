@@ -1,0 +1,300 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1776352494125,
+  "projectRoot": "C:\\Users\\jeram\\bloom-engine",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "react",
+        "version": "18",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "18",
+        "category": "frontend"
+      },
+      {
+        "name": "next",
+        "version": "14.2.35",
+        "category": "fullstack"
+      },
+      {
+        "name": "@playwright/test",
+        "version": "1.51.1",
+        "category": "testing"
+      },
+      {
+        "name": "playwright",
+        "version": "1.51.1",
+        "category": "testing"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "npm run build",
+    "testCommand": null,
+    "lintCommand": "npm run lint",
+    "devCommand": "npm run dev",
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "next lint",
+      "add-client": "npx ts-node --project tsconfig.json scripts/add-client.ts",
+      "audit": "npx ts-node --project tsconfig.json scripts/run-audit.ts",
+      "generate-schema": "npx ts-node --project tsconfig.json scripts/generate-schema.ts",
+      "seed-db": "npx ts-node --project tsconfig.json scripts/seed-db.ts"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": "type-based"
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "app",
+      "public",
+      "scripts",
+      "src"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "app": {
+      "path": "app",
+      "purpose": "Application code",
+      "fileCount": 4,
+      "lastAccessed": 1776352494071,
+      "keyFiles": [
+        "favicon.ico",
+        "globals.css",
+        "layout.tsx",
+        "page.tsx"
+      ]
+    },
+    "clients": {
+      "path": "clients",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1776352494072,
+      "keyFiles": []
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 0,
+      "lastAccessed": 1776352494085,
+      "keyFiles": []
+    },
+    "scripts": {
+      "path": "scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 6,
+      "lastAccessed": 1776352494086,
+      "keyFiles": [
+        "add-client.ts",
+        "create-schema.sql",
+        "generate-schema.ts",
+        "run-audit.ts",
+        "seed-db.ts"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 0,
+      "lastAccessed": 1776352494086,
+      "keyFiles": []
+    },
+    "supabase": {
+      "path": "supabase",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1776352494087,
+      "keyFiles": []
+    },
+    "app\\api": {
+      "path": "app\\api",
+      "purpose": "API routes",
+      "fileCount": 0,
+      "lastAccessed": 1776352494087,
+      "keyFiles": []
+    },
+    "src\\components": {
+      "path": "src\\components",
+      "purpose": "UI components",
+      "fileCount": 0,
+      "lastAccessed": 1776352494089,
+      "keyFiles": []
+    },
+    "src\\lib": {
+      "path": "src\\lib",
+      "purpose": "Library code",
+      "fileCount": 6,
+      "lastAccessed": 1776352494089,
+      "keyFiles": [
+        "audit-agent.ts",
+        "client-loader.ts",
+        "content-engine.ts"
+      ]
+    },
+    "supabase\\migrations": {
+      "path": "supabase\\migrations",
+      "purpose": "Database migrations",
+      "fileCount": 1,
+      "lastAccessed": 1776352494097,
+      "keyFiles": [
+        "20260416000000_bloom_engine_schema.sql"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "scripts\\generate-fboc-all.ts",
+      "accessCount": 11,
+      "lastAccessed": 1776359007306,
+      "type": "file"
+    },
+    {
+      "path": "app\\dashboard\\layout.tsx",
+      "accessCount": 10,
+      "lastAccessed": 1776360789876,
+      "type": "file"
+    },
+    {
+      "path": "app\\dashboard\\login\\page.tsx",
+      "accessCount": 4,
+      "lastAccessed": 1776360795221,
+      "type": "file"
+    },
+    {
+      "path": "src\\lib\\audit-agent.ts",
+      "accessCount": 3,
+      "lastAccessed": 1776359121585,
+      "type": "file"
+    },
+    {
+      "path": "scripts\\test-fboc-aeo.ts",
+      "accessCount": 2,
+      "lastAccessed": 1776358946399,
+      "type": "file"
+    },
+    {
+      "path": "middleware.ts",
+      "accessCount": 2,
+      "lastAccessed": 1776360440676,
+      "type": "file"
+    },
+    {
+      "path": "app\\api\\auth\\login\\route.ts",
+      "accessCount": 2,
+      "lastAccessed": 1776360490258,
+      "type": "file"
+    },
+    {
+      "path": "COMPLETE.md",
+      "accessCount": 1,
+      "lastAccessed": 1776357245584,
+      "type": "file"
+    },
+    {
+      "path": "src\\lib\\content-engine.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776358715453,
+      "type": "file"
+    },
+    {
+      "path": "src\\lib\\perplexity-engine.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776358716553,
+      "type": "file"
+    },
+    {
+      "path": "scripts\\run-audit.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776358723995,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 1,
+      "lastAccessed": 1776358725098,
+      "type": "file"
+    },
+    {
+      "path": "clients\\fboc\\config.json",
+      "accessCount": 1,
+      "lastAccessed": 1776358725169,
+      "type": "file"
+    },
+    {
+      "path": "src\\lib\\supabase.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776358745143,
+      "type": "file"
+    },
+    {
+      "path": "src\\lib\\client-loader.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776358746101,
+      "type": "file"
+    },
+    {
+      "path": "scripts\\create-schema.sql",
+      "accessCount": 1,
+      "lastAccessed": 1776358908416,
+      "type": "file"
+    },
+    {
+      "path": "tsconfig.json",
+      "accessCount": 1,
+      "lastAccessed": 1776359032457,
+      "type": "file"
+    },
+    {
+      "path": "tsconfig.scripts.json",
+      "accessCount": 1,
+      "lastAccessed": 1776359173621,
+      "type": "file"
+    },
+    {
+      "path": "next.config.mjs",
+      "accessCount": 1,
+      "lastAccessed": 1776360036341,
+      "type": "file"
+    },
+    {
+      "path": "app\\dashboard\\auth-wrapper.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776360741387,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

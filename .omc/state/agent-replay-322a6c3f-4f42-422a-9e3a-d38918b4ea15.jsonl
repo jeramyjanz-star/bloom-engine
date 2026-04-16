@@ -9,3 +9,7 @@
 {"t":0,"agent":"a944aec","agent_type":"general-purpose","event":"agent_stop","success":true,"duration_ms":392568}
 {"t":0,"agent":"a2b12b5","agent_type":"general-purpose","event":"agent_start","parent_mode":"none"}
 {"t":0,"agent":"a2b12b5","agent_type":"general-purpose","event":"agent_stop","success":true,"duration_ms":497528}
+{"t":0,"agent":"system","event":"skill_invoked","skill_name":"oh-my-claudecode:cancel"}
+{"t":0,"agent":"a030776","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"aab0a98","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"a28768f","agent_type":"unknown","event":"agent_stop","success":true}
