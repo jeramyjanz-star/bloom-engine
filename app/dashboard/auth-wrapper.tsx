@@ -6,6 +6,7 @@ export default function AuthWrapper({ children }: { children: React.ReactNode })
   const [authenticated, setAuthenticated] = useState(false)
   const [ready, setReady] = useState(false)
   const [password, setPassword] = useState('')
+  const [showPassword, setShowPassword] = useState(false)
   const [pwError, setPwError] = useState('')
   const [pwLoading, setPwLoading] = useState(false)
 
@@ -128,21 +129,36 @@ export default function AuthWrapper({ children }: { children: React.ReactNode })
             }}>
               Access Password
             </label>
-            <input
-              type="password"
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-              required
-              autoFocus
-              placeholder="Enter dashboard password"
-              style={{
-                width: '100%', background: '#0D0D0D',
-                border: `1px solid ${pwError ? '#DC2626' : '#262626'}`,
-                borderRadius: '2px', padding: '12px 14px', color: '#EDEDED',
-                fontFamily: 'monospace', fontSize: '14px', outline: 'none',
-                boxSizing: 'border-box',
-              }}
-            />
+            <div style={{ position: 'relative' }}>
+              <input
+                type={showPassword ? 'text' : 'password'}
+                value={password}
+                onChange={e => setPassword(e.target.value)}
+                required
+                autoFocus
+                placeholder="Enter dashboard password"
+                style={{
+                  width: '100%', background: '#0D0D0D',
+                  border: `1px solid ${pwError ? '#DC2626' : '#262626'}`,
+                  borderRadius: '2px', padding: '12px 44px 12px 14px', color: '#EDEDED',
+                  fontFamily: 'monospace', fontSize: '14px', outline: 'none',
+                  boxSizing: 'border-box',
+                }}
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(v => !v)}
+                style={{
+                  position: 'absolute', right: '12px', top: '50%',
+                  transform: 'translateY(-50%)', background: 'none', border: 'none',
+                  cursor: 'pointer', color: '#94A3B8', fontSize: '16px', padding: '2px',
+                  lineHeight: 1,
+                }}
+                aria-label={showPassword ? 'Hide password' : 'Show password'}
+              >
+                {showPassword ? '🙈' : '👁'}
+              </button>
+            </div>
           </div>
 
           {pwError && (

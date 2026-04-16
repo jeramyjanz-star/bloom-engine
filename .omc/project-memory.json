@@ -194,15 +194,21 @@
       "type": "file"
     },
     {
-      "path": "app\\dashboard\\login\\page.tsx",
-      "accessCount": 4,
-      "lastAccessed": 1776360795221,
+      "path": "app\\dashboard\\auth-wrapper.tsx",
+      "accessCount": 8,
+      "lastAccessed": 1776366769516,
       "type": "file"
     },
     {
       "path": "app\\api\\auth\\login\\route.ts",
+      "accessCount": 5,
+      "lastAccessed": 1776366734556,
+      "type": "file"
+    },
+    {
+      "path": "app\\dashboard\\login\\page.tsx",
       "accessCount": 4,
-      "lastAccessed": 1776364916739,
+      "lastAccessed": 1776360795221,
       "type": "file"
     },
     {
@@ -215,12 +221,6 @@
       "path": "next.config.mjs",
       "accessCount": 3,
       "lastAccessed": 1776362663776,
-      "type": "file"
-    },
-    {
-      "path": "app\\dashboard\\auth-wrapper.tsx",
-      "accessCount": 3,
-      "lastAccessed": 1776364977094,
       "type": "file"
     },
     {
@@ -239,6 +239,12 @@
       "path": "app\\page.tsx",
       "accessCount": 2,
       "lastAccessed": 1776362926531,
+      "type": "file"
+    },
+    {
+      "path": "app\\api\\auth\\magic-link\\route.ts",
+      "accessCount": 2,
+      "lastAccessed": 1776366737336,
       "type": "file"
     },
     {
@@ -324,12 +330,6 @@
       "accessCount": 1,
       "lastAccessed": 1776364034542,
       "type": "directory"
-    },
-    {
-      "path": "app\\api\\auth\\magic-link\\route.ts",
-      "accessCount": 1,
-      "lastAccessed": 1776364936293,
-      "type": "file"
     },
     {
       "path": "app\\api\\auth\\verify\\route.ts",

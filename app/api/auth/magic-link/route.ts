@@ -22,6 +22,10 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     return NextResponse.json({ error: 'Valid email required' }, { status: 400 })
   }
 
+  if (email !== 'jeramyjanz@gmail.com') {
+    return NextResponse.json({ error: 'Unauthorized email address' }, { status: 403 })
+  }
+
   const secret = process.env.BLOOM_ADMIN_PASSWORD
   const resendKey = process.env.RESEND_API_KEY
   if (!secret || !resendKey) {
