@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Playfair_Display, IBM_Plex_Mono, Inter } from 'next/font/google'
+import AuthWrapper from './auth-wrapper'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -26,6 +27,7 @@ export default function DashboardLayout({
   children: React.ReactNode
 }) {
   return (
+    <AuthWrapper>
     <html
       lang="en"
       className={`${playfair.variable} ${ibmPlexMono.variable} ${inter.variable}`}
@@ -159,6 +161,7 @@ export default function DashboardLayout({
         </div>
       </body>
     </html>
+    </AuthWrapper>
   )
 }
 
