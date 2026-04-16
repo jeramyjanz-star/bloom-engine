@@ -5,7 +5,7 @@ import SEOHealthPanel from './components/SEOHealthPanel'
 import AEOPanel from './components/AEOPanel'
 import ContentPanel from './components/ContentPanel'
 import SchemaPanel from './components/SchemaPanel'
-import LaunchChecklistPanel from './components/LaunchChecklistPanel'
+import LaunchChecklistPanel, { type ChecklistState } from './components/LaunchChecklistPanel'
 
 interface AuditRow {
   id: string
@@ -110,16 +110,16 @@ async function getContentData(clientId: string) {
   return (data ?? []) as ContentRow[]
 }
 
-async function getChecklistData(clientId: string): Promise<Record<string, boolean>> {
+async function getChecklistData(clientId: string): Promise<ChecklistState> {
   const { data } = await supabaseAdmin
     .schema('bloom_engine')
     .from('launch_checklist')
-    .select('item_key, completed')
+    .select('item_key, completed, completed_at')
     .eq('client_id', clientId)
 
-  const state: Record<string, boolean> = {}
-  for (const row of (data ?? []) as Array<{ item_key: string; completed: boolean }>) {
-    state[row.item_key] = row.completed
+  const state: ChecklistState = {}
+  for (const row of (data ?? []) as Array<{ item_key: string; completed: boolean; completed_at: string | null }>) {
+    state[row.item_key] = { completed: row.completed, completed_at: row.completed_at }
   }
   return state
 }
