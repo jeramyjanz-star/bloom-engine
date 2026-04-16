@@ -5,6 +5,7 @@ import SEOHealthPanel from './components/SEOHealthPanel'
 import AEOPanel from './components/AEOPanel'
 import ContentPanel from './components/ContentPanel'
 import SchemaPanel from './components/SchemaPanel'
+import LaunchChecklistPanel from './components/LaunchChecklistPanel'
 
 interface AuditRow {
   id: string
@@ -109,6 +110,20 @@ async function getContentData(clientId: string) {
   return (data ?? []) as ContentRow[]
 }
 
+async function getChecklistData(clientId: string): Promise<Record<string, boolean>> {
+  const { data } = await supabaseAdmin
+    .schema('bloom_engine')
+    .from('launch_checklist')
+    .select('item_key, completed')
+    .eq('client_id', clientId)
+
+  const state: Record<string, boolean> = {}
+  for (const row of (data ?? []) as Array<{ item_key: string; completed: boolean }>) {
+    state[row.item_key] = row.completed
+  }
+  return state
+}
+
 async function getSchemaData(clientId: string) {
   const { data } = await supabaseAdmin
     .schema('bloom_engine')
@@ -136,11 +151,12 @@ export default async function ClientDashboardPage({
   }
 
   // Fetch all panel data in parallel
-  const [auditData, aeoRows, contentRows, schemaRows] = await Promise.all([
+  const [auditData, aeoRows, contentRows, schemaRows, checklistState] = await Promise.all([
     getAuditData(clientId),
     getAEOData(clientId),
     getContentData(clientId),
     getSchemaData(clientId),
+    getChecklistData(clientId),
   ])
 
   return (
@@ -210,6 +226,12 @@ export default async function ClientDashboardPage({
         <SchemaPanel
           clientId={clientId}
           schemaRows={schemaRows}
+        />
+
+        {/* Panel 5: Launch Checklist */}
+        <LaunchChecklistPanel
+          clientId={clientId}
+          initialState={checklistState}
         />
       </div>
     </div>
