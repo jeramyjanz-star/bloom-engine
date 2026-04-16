@@ -1,0 +1,112 @@
+{
+  "clientId": "fboc",
+  "url": "https://frenchbloomsoc.com",
+  "crawledAt": "2026-04-16T17:10:39.553Z",
+  "healthScore": 88,
+  "pagesCrawled": 1,
+  "criticalIssues": 0,
+  "highIssues": 0,
+  "issues": [
+    {
+      "type": "meta-description-too-long",
+      "severity": "low",
+      "description": "Meta description is 163 characters — may be truncated.",
+      "recommendation": "Trim meta description to 140–160 characters."
+    },
+    {
+      "type": "images-missing-alt",
+      "severity": "medium",
+      "description": "1 of 26 images are missing alt text.",
+      "recommendation": "Add descriptive alt text to every image for accessibility and image SEO.",
+      "fixContent": "<img src=\"...\" alt=\"Descriptive text about the image\">"
+    },
+    {
+      "type": "slow-page-load",
+      "severity": "medium",
+      "description": "Page took 3255ms to load (target: <3000ms).",
+      "recommendation": "Optimize images, enable caching, use a CDN, and defer non-critical scripts."
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://frenchbloomsoc.com",
+      "statusCode": 200,
+      "redirectChain": [],
+      "title": {
+        "text": "French Blooms OC | Luxury Florist Orange County CA",
+        "length": 50,
+        "hasTargetKeyword": false
+      },
+      "metaDescription": {
+        "text": "Bespoke floral design for corporate events, baby showers, anniversaries & office subscriptions. Serving Newport Beach, Irvine, Laguna Beach & all of Orange County.",
+        "length": 163,
+        "hasTargetKeyword": false
+      },
+      "h1": {
+        "count": 1,
+        "texts": [
+          "Where Every Petal Tells a Story"
+        ]
+      },
+      "h2s": [
+        "Crafted with Intention.Delivered with Care.",
+        "Our Services",
+        "Our Work",
+        "Let's Begin"
+      ],
+      "imagesWithoutAlt": 1,
+      "totalImages": 26,
+      "canonicalUrl": "https://frenchbloomsoc.com",
+      "internalLinks": [
+        "https://frenchbloomsoc.com/"
+      ],
+      "brokenLinks": [],
+      "schemaTypesDetected": [
+        "Florist",
+        "FAQPage"
+      ],
+      "loadTimeMs": 3255,
+      "hasMobileViewport": true,
+      "openGraphTags": {
+        "og:title": "French Blooms OC | Luxury Florist Orange County CA",
+        "og:description": "Handcrafted floral artistry inspired by the gardens of France — designed for your most meaningful moments in Orange County.",
+        "og:image": "https://etzonmhbrmdiwblheesg.supabase.co/storage/v1/object/public/frenchblooms-media/media/1774807663663-IMG_4380.jpeg",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "French Blooms OC — Luxury Floral Design Orange County",
+        "og:url": "https://frenchbloomsoc.com",
+        "og:type": "website",
+        "og:site_name": "French Blooms OC",
+        "og:locale": "en_US"
+      },
+      "issues": [
+        {
+          "type": "meta-description-too-long",
+          "severity": "low",
+          "description": "Meta description is 163 characters — may be truncated.",
+          "recommendation": "Trim meta description to 140–160 characters."
+        },
+        {
+          "type": "images-missing-alt",
+          "severity": "medium",
+          "description": "1 of 26 images are missing alt text.",
+          "recommendation": "Add descriptive alt text to every image for accessibility and image SEO.",
+          "fixContent": "<img src=\"...\" alt=\"Descriptive text about the image\">"
+        },
+        {
+          "type": "slow-page-load",
+          "severity": "medium",
+          "description": "Page took 3255ms to load (target: <3000ms).",
+          "recommendation": "Optimize images, enable caching, use a CDN, and defer non-critical scripts."
+        }
+      ]
+    }
+  ],
+  "siteChecks": {
+    "hasSitemap": true,
+    "sitemapValid": true,
+    "hasRobotsTxt": true,
+    "httpsEverywhere": true,
+    "wwwRedirectConsistent": true
+  }
+}

@@ -1,7 +1,7 @@
 import { chromium, Browser, Page, Response } from 'playwright'
 import path from 'path'
 import fs from 'fs/promises'
-import { supabaseAdmin } from '@/src/lib/supabase'
+import { supabaseAdmin } from './supabase'
 
 // ---------------------------------------------------------------------------
 // Interfaces
@@ -140,15 +140,12 @@ export class AuditAgent {
       .from('seo_audits')
       .insert({
         client_id: audit.clientId,
-        url: audit.url,
         crawled_at: audit.crawledAt,
         health_score: audit.healthScore,
         pages_crawled: audit.pagesCrawled,
         critical_issues: audit.criticalIssues,
         high_issues: audit.highIssues,
-        issues: audit.issues,
-        pages: audit.pages,
-        site_checks: audit.siteChecks,
+        issues_json: { issues: audit.issues, pages: audit.pages, siteChecks: audit.siteChecks },
       })
       .select('id')
       .single()

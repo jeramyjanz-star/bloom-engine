@@ -1,0 +1,19 @@
+# robots.txt — optimized by BLOOM ENGINE
+# Generated: 2026-04-16T17:10:39.553Z
+
+User-agent: *
+Allow: /
+
+# Block common non-content paths
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /*.json$
+Disallow: /api/
+Disallow: /_next/
+
+# Allow Googlebot full access
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://frenchbloomsoc.com/sitemap.xml
