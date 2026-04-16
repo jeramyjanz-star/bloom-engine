@@ -1,5 +1,3 @@
-import { cookies } from 'next/headers'
-import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { Playfair_Display, IBM_Plex_Mono, Inter } from 'next/font/google'
 
@@ -27,20 +25,6 @@ export default function DashboardLayout({
 }: {
   children: React.ReactNode
 }) {
-  // Secondary auth check — middleware handles the primary redirect
-  const cookieStore = cookies()
-  const authCookie = cookieStore.get('bloom_auth')
-  const adminPassword = process.env.BLOOM_ADMIN_PASSWORD
-
-  if (!authCookie || !adminPassword) {
-    redirect('/dashboard/login')
-  }
-
-  const decoded = Buffer.from(authCookie.value, 'base64').toString('utf-8')
-  if (decoded !== adminPassword) {
-    redirect('/dashboard/login')
-  }
-
   return (
     <html
       lang="en"
