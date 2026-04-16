@@ -1,6 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server'
-import fs from 'fs/promises'
-import path from 'path'
 import Anthropic from '@anthropic-ai/sdk'
 import { loadClientConfig } from '@/src/lib/client-loader'
 import { SchemaEngine } from '@/src/lib/schema-engine'
@@ -145,21 +143,7 @@ export async function POST(
     )
   }
 
-  // 5. Write bundle to /public/clients/[clientId]/schema-bundle.json
-  const outputDir = path.join(process.cwd(), 'public', 'clients', clientId)
-  const outputPath = path.join(outputDir, 'schema-bundle.json')
-
-  try {
-    await fs.mkdir(outputDir, { recursive: true })
-    await fs.writeFile(outputPath, JSON.stringify(bundle, null, 2), 'utf-8')
-  } catch (err) {
-    return NextResponse.json(
-      { error: `Failed to write schema-bundle.json: ${String(err)}` },
-      { status: 500 }
-    )
-  }
-
-  // 6. Return the bundle and a helpful install guide
+  // 5. Return the bundle and a helpful install guide
   const installGuide = engine.generateInstallGuide(clientId, bundle)
 
   return NextResponse.json(
@@ -168,7 +152,6 @@ export async function POST(
       clientId,
       bundle,
       installGuide,
-      outputFile: `/clients/${clientId}/schema-bundle.json`,
     },
     { status: 200 }
   )
