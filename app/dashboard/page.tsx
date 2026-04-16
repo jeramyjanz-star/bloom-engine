@@ -147,6 +147,7 @@ export default async function DashboardOverviewPage() {
 
   return (
     <div style={{ padding: '40px 40px 60px', minHeight: '100vh' }}>
+      <style>{`.add-client-card:hover { border-color: #D4AF6A !important; }`}</style>
       {/* Header */}
       <div style={{ marginBottom: '40px' }}>
         <h1
@@ -229,6 +230,7 @@ export default async function DashboardOverviewPage() {
           style={{ textDecoration: 'none' }}
         >
           <div
+            className="add-client-card"
             style={{
               background: '#161616',
               border: '1px dashed #262626',
@@ -242,12 +244,6 @@ export default async function DashboardOverviewPage() {
               minHeight: '200px',
               cursor: 'pointer',
               transition: 'border-color 0.15s',
-            }}
-            onMouseEnter={(e) => {
-              ;(e.currentTarget as HTMLDivElement).style.borderColor = '#D4AF6A'
-            }}
-            onMouseLeave={(e) => {
-              ;(e.currentTarget as HTMLDivElement).style.borderColor = '#262626'
             }}
           >
             <div
