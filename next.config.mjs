@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/dashboard/login',
+        destination: '/dashboard',
+        permanent: false,
+      },
+    ]
+  },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'etzonmhbrmdiwblheesg.supabase.co' },

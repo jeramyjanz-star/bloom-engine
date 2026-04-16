@@ -176,15 +176,15 @@
   },
   "hotPaths": [
     {
-      "path": "scripts\\generate-fboc-all.ts",
-      "accessCount": 11,
-      "lastAccessed": 1776359007306,
+      "path": "app\\dashboard\\layout.tsx",
+      "accessCount": 12,
+      "lastAccessed": 1776361984645,
       "type": "file"
     },
     {
-      "path": "app\\dashboard\\layout.tsx",
-      "accessCount": 10,
-      "lastAccessed": 1776360789876,
+      "path": "scripts\\generate-fboc-all.ts",
+      "accessCount": 11,
+      "lastAccessed": 1776359007306,
       "type": "file"
     },
     {
@@ -197,6 +197,12 @@
       "path": "src\\lib\\audit-agent.ts",
       "accessCount": 3,
       "lastAccessed": 1776359121585,
+      "type": "file"
+    },
+    {
+      "path": "next.config.mjs",
+      "accessCount": 3,
+      "lastAccessed": 1776362663776,
       "type": "file"
     },
     {
@@ -215,6 +221,12 @@
       "path": "app\\api\\auth\\login\\route.ts",
       "accessCount": 2,
       "lastAccessed": 1776360490258,
+      "type": "file"
+    },
+    {
+      "path": "app\\dashboard\\auth-wrapper.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1776361899521,
       "type": "file"
     },
     {
@@ -284,15 +296,15 @@
       "type": "file"
     },
     {
-      "path": "next.config.mjs",
+      "path": "vercel.json",
       "accessCount": 1,
-      "lastAccessed": 1776360036341,
+      "lastAccessed": 1776361918648,
       "type": "file"
     },
     {
-      "path": "app\\dashboard\\auth-wrapper.tsx",
+      "path": "app\\layout.tsx",
       "accessCount": 1,
-      "lastAccessed": 1776360741387,
+      "lastAccessed": 1776361925082,
       "type": "file"
     }
   ],
