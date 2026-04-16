@@ -10,7 +10,7 @@ function sseEvent(event: string, data: unknown): string {
   return `event: ${event}\ndata: ${JSON.stringify(data)}\n\n`
 }
 
-export async function POST(_request: NextRequest, { params }: RouteParams) {
+export async function GET(_request: NextRequest, { params }: RouteParams) {
   const { clientId } = params
 
   const perplexityApiKey = process.env.PERPLEXITY_API_KEY

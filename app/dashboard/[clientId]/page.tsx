@@ -26,7 +26,7 @@ interface AuditRow {
 
 interface AEORow {
   id: string
-  query: string
+  query_text: string
   client_cited: boolean
   client_url: string | null
   competitors: string[]

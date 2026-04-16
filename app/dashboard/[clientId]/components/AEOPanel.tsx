@@ -5,7 +5,7 @@ import type { ClientConfig } from '@/src/lib/client-loader'
 
 interface AEORow {
   id: string
-  query: string
+  query_text: string
   client_cited: boolean
   client_url: string | null
   competitors: string[]
@@ -112,7 +112,7 @@ function QueryRow({
       const res = await fetch(`/api/${clientId}/aeo/test-query`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query: row.query }),
+        body: JSON.stringify({ query: row.query_text }),
       })
       if (res.ok) {
         const result = await res.json() as {
@@ -153,7 +153,7 @@ function QueryRow({
             maxWidth: '280px',
           }}
         >
-          {row.query}
+          {row.query_text}
         </td>
 
         {/* Status */}
@@ -304,7 +304,7 @@ export default function AEOPanel({ clientId, aeoRows, clientConfig }: Props) {
 
   const handleRowUpdate = useCallback((updated: AEORow) => {
     setRows((prev) =>
-      prev.map((r) => (r.query === updated.query ? updated : r))
+      prev.map((r) => (r.query_text === updated.query_text ? updated : r))
     )
   }, [])
 
@@ -330,7 +330,7 @@ export default function AEOPanel({ clientId, aeoRows, clientConfig }: Props) {
       setProgress({ done: data.index + 1, total: data.total })
       setRows((prev) =>
         prev.map((r) =>
-          r.query === data.query
+          r.query_text === data.query
             ? {
                 ...r,
                 client_cited: data.result.clientCited,
@@ -511,7 +511,7 @@ export default function AEOPanel({ clientId, aeoRows, clientConfig }: Props) {
               <tbody>
                 {rows.map((row) => (
                   <QueryRow
-                    key={row.query}
+                    key={row.query_text}
                     row={row}
                     clientId={clientId}
                     onUpdate={handleRowUpdate}
