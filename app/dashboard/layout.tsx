@@ -1,12 +1,6 @@
 import Link from 'next/link'
-import { Playfair_Display, IBM_Plex_Mono, Inter } from 'next/font/google'
+import { IBM_Plex_Mono, Inter } from 'next/font/google'
 import AuthWrapper from './auth-wrapper'
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  variable: '--font-playfair',
-  display: 'swap',
-})
 
 const ibmPlexMono = IBM_Plex_Mono({
   subsets: ['latin'],
@@ -28,152 +22,113 @@ export default function DashboardLayout({
 }) {
   return (
     <AuthWrapper>
-    <html
-      lang="en"
-      className={`${playfair.variable} ${ibmPlexMono.variable} ${inter.variable}`}
-    >
-      <head />
-      <body
+      <div
+        className={`${ibmPlexMono.variable} ${inter.variable}`}
         style={{
-          ['--bloom-bg' as string]: '#0D0D0D',
-          ['--bloom-card' as string]: '#161616',
-          ['--bloom-border' as string]: '#262626',
-          ['--bloom-gold' as string]: '#D4AF6A',
-          ['--bloom-teal' as string]: '#00D4B4',
-          ['--bloom-crimson' as string]: '#DC2626',
-          ['--bloom-steel' as string]: '#94A3B8',
+          display: 'flex',
+          minHeight: '100vh',
           background: '#0D0D0D',
           color: '#EDEDED',
           fontFamily: 'var(--font-inter), sans-serif',
-          margin: 0,
-          padding: 0,
         }}
       >
-        <div style={{ display: 'flex', minHeight: '100vh' }}>
-          {/* Sidebar */}
-          <aside
-            style={{
-              width: '220px',
-              minWidth: '220px',
-              background: '#161616',
-              borderRight: '1px solid #262626',
-              display: 'flex',
-              flexDirection: 'column',
-              padding: '0',
-              position: 'sticky',
-              top: 0,
-              height: '100vh',
-              overflowY: 'auto',
-            }}
-          >
-            {/* Logo */}
-            <div
-              style={{
-                padding: '28px 20px 24px',
-                borderBottom: '1px solid #262626',
-              }}
-            >
-              <Link href="/dashboard" style={{ textDecoration: 'none' }}>
-                <div
-                  style={{
-                    fontFamily: 'var(--font-playfair), serif',
-                    fontSize: '18px',
-                    fontWeight: 700,
-                    background: 'linear-gradient(135deg, #D4AF6A 0%, #F0D08A 50%, #D4AF6A 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
-                    letterSpacing: '0.05em',
-                    lineHeight: 1.2,
-                  }}
-                >
-                  BLOOM ENGINE
-                </div>
-                <div
-                  style={{
-                    fontFamily: 'var(--font-ibm-plex-mono), monospace',
-                    fontSize: '9px',
-                    color: '#94A3B8',
-                    letterSpacing: '0.12em',
-                    marginTop: '4px',
-                  }}
-                >
-                  INTELLIGENCE PLATFORM
-                </div>
-              </Link>
-            </div>
-
-            {/* Nav */}
-            <nav style={{ padding: '16px 0', flex: 1 }}>
+        {/* Sidebar */}
+        <aside
+          style={{
+            width: '220px',
+            minWidth: '220px',
+            background: '#161616',
+            borderRight: '1px solid #262626',
+            display: 'flex',
+            flexDirection: 'column',
+            position: 'sticky',
+            top: 0,
+            height: '100vh',
+            overflowY: 'auto',
+          }}
+        >
+          <div style={{ padding: '28px 20px 24px', borderBottom: '1px solid #262626' }}>
+            <Link href="/dashboard" style={{ textDecoration: 'none' }}>
               <div
                 style={{
                   fontFamily: 'var(--font-ibm-plex-mono), monospace',
-                  fontSize: '9px',
-                  color: '#94A3B8',
-                  letterSpacing: '0.15em',
-                  padding: '0 20px 8px',
-                  textTransform: 'uppercase',
-                }}
-              >
-                Navigation
-              </div>
-              <SidebarLink href="/dashboard" label="Overview" icon="◈" />
-              <SidebarLink href="/dashboard" label="Client List" icon="◇" />
-            </nav>
-
-            {/* Bottom anchor */}
-            <div
-              style={{
-                padding: '16px 20px',
-                borderTop: '1px solid #262626',
-              }}
-            >
-              <div
-                style={{
-                  fontFamily: 'var(--font-ibm-plex-mono), monospace',
-                  fontSize: '9px',
+                  fontSize: '18px',
+                  fontWeight: 700,
                   color: '#D4AF6A',
-                  letterSpacing: '0.12em',
-                  textTransform: 'uppercase',
-                  opacity: 0.8,
+                  letterSpacing: '0.05em',
+                  lineHeight: 1.2,
                 }}
               >
-                ANCHOR Intelligence
+                BLOOM ENGINE
               </div>
               <div
                 style={{
                   fontFamily: 'var(--font-ibm-plex-mono), monospace',
-                  fontSize: '8px',
+                  fontSize: '9px',
                   color: '#94A3B8',
+                  letterSpacing: '0.12em',
                   marginTop: '4px',
-                  opacity: 0.6,
                 }}
               >
-                v1.0.0
+                INTELLIGENCE PLATFORM
               </div>
-            </div>
-          </aside>
+            </Link>
+          </div>
 
-          {/* Main content */}
-          <main style={{ flex: 1, minWidth: 0, overflowX: 'hidden' }}>
-            {children}
-          </main>
-        </div>
-      </body>
-    </html>
+          <nav style={{ padding: '16px 0', flex: 1 }}>
+            <div
+              style={{
+                fontFamily: 'var(--font-ibm-plex-mono), monospace',
+                fontSize: '9px',
+                color: '#94A3B8',
+                letterSpacing: '0.15em',
+                padding: '0 20px 8px',
+                textTransform: 'uppercase',
+              }}
+            >
+              Navigation
+            </div>
+            <SidebarLink href="/dashboard" label="Overview" icon="◈" />
+            <SidebarLink href="/dashboard" label="Client List" icon="◇" />
+          </nav>
+
+          <div style={{ padding: '16px 20px', borderTop: '1px solid #262626' }}>
+            <div
+              style={{
+                fontFamily: 'var(--font-ibm-plex-mono), monospace',
+                fontSize: '9px',
+                color: '#D4AF6A',
+                letterSpacing: '0.12em',
+                textTransform: 'uppercase',
+                opacity: 0.8,
+              }}
+            >
+              ANCHOR Intelligence
+            </div>
+            <div
+              style={{
+                fontFamily: 'var(--font-ibm-plex-mono), monospace',
+                fontSize: '8px',
+                color: '#94A3B8',
+                marginTop: '4px',
+                opacity: 0.6,
+              }}
+            >
+              v1.0.0
+            </div>
+          </div>
+        </aside>
+
+        {/* Main content */}
+        <main style={{ flex: 1, minWidth: 0, overflowX: 'hidden' }}>
+          {children}
+        </main>
+      </div>
     </AuthWrapper>
   )
 }
 
-function SidebarLink({
-  href,
-  label,
-  icon,
-}: {
-  href: string
-  label: string
-  icon: string
-}) {
+function SidebarLink({ href, label, icon }: { href: string; label: string; icon: string }) {
   return (
     <Link
       href={href}
@@ -187,7 +142,6 @@ function SidebarLink({
         fontFamily: 'var(--font-inter), sans-serif',
         fontSize: '13px',
         fontWeight: 500,
-        transition: 'color 0.15s',
       }}
     >
       <span style={{ color: '#D4AF6A', fontSize: '10px' }}>{icon}</span>
