@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-const FALLBACK_PASSWORD = 'OkiUirTYaHMVBQe3ly7J7kJuZzQOXgDR'
+const FALLBACK_PASSWORD = 'AnchorBloom2026'
 
 export async function POST(request: NextRequest): Promise<NextResponse> {
   let password: string | undefined
@@ -16,9 +16,13 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   }
 
   const adminPassword = process.env.BLOOM_ADMIN_PASSWORD
-  console.log('[auth/login] BLOOM_ADMIN_PASSWORD:', adminPassword ?? '(undefined — using fallback)')
-
   const effectivePassword = adminPassword ?? FALLBACK_PASSWORD
+
+  console.log('[auth/login] submitted length:', password.length)
+  console.log('[auth/login] submitted chars:', JSON.stringify(password))
+  console.log('[auth/login] env var present:', adminPassword !== undefined)
+  console.log('[auth/login] effective length:', effectivePassword.length)
+  console.log('[auth/login] match:', password === effectivePassword)
 
   if (password !== effectivePassword) {
     return NextResponse.json({ error: 'Invalid password' }, { status: 401 })
