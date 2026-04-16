@@ -3,12 +3,25 @@ import { NextRequest, NextResponse } from 'next/server'
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  // Only protect /dashboard/* — but NOT /dashboard/login
-  if (pathname.startsWith('/dashboard') && !pathname.startsWith('/dashboard/login')) {
-    const authCookie = request.cookies.get('bloom_auth')
-    const adminPassword = process.env.BLOOM_ADMIN_PASSWORD
+  // Always allow login page — must never be redirected
+  if (pathname.startsWith('/dashboard/login')) {
+    return NextResponse.next()
+  }
 
-    if (!authCookie || !adminPassword) {
+  // Always allow API and Next.js internals
+  if (pathname.startsWith('/api/') || pathname.startsWith('/_next/')) {
+    return NextResponse.next()
+  }
+
+  // Protect all other /dashboard routes
+  if (pathname.startsWith('/dashboard')) {
+    const authCookie = request.cookies.get('bloom_auth')
+    if (!authCookie?.value) {
+      return NextResponse.redirect(new URL('/dashboard/login', request.url))
+    }
+
+    const adminPassword = process.env.BLOOM_ADMIN_PASSWORD
+    if (!adminPassword) {
       return NextResponse.redirect(new URL('/dashboard/login', request.url))
     }
 
@@ -28,5 +41,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/dashboard/:path*'],
+  matcher: ['/dashboard/:path*', '/api/:path*'],
 }
