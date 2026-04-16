@@ -1,7 +1,7 @@
 {
-  "tool_name": "Read",
-  "tool_input_preview": "{\"file_path\":\"C:\\\\Users\\\\jeram\\\\bloom-engine\\\\.next\\\\server\\\\middleware.js\",\"limit\":30}",
-  "error": "File content (34817 tokens) exceeds maximum allowed tokens (25000). Use offset and limit parameters to read specific portions of the file, or search for specific content instead of reading the whole file.",
-  "timestamp": "2026-04-16T17:52:05.490Z",
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"cd C:/Users/jeram/bloom-engine && vercel --prod --scope jeramys-projects-a49f672b --yes 2>&1\",\"timeout\":300000,\"description\":\"Force Vercel production deployment from local code\"}",
+  "error": "Exit code 1\nRetrieving project…\nDeploying jeramys-projects-a49f672b/bloom-engine\nUploading [--------------------] (0.0B/289.4KB)\nUploading [=====---------------] (73.1KB/289.4KB)\nUploading [==========----------] (146.7KB/289.4KB)\nUploading [===============-----] (223.5KB/289.4KB)\nUploading [====================] (289.4KB/289.4KB)\nInspect: https://vercel.com/jeramys-projects-a49f672b/bloom-engine/AdGXXTGMn1o3n5rkCLUEgMjGYoZT [2s]\nProduction: https://bloom-engine-4hz8lo6wk-jeramys-projects-a49f672...",
+  "timestamp": "2026-04-16T18:26:28.709Z",
   "retry_count": 1
 }

@@ -188,9 +188,21 @@
       "type": "file"
     },
     {
+      "path": "app\\dashboard\\page.tsx",
+      "accessCount": 10,
+      "lastAccessed": 1776364122598,
+      "type": "file"
+    },
+    {
       "path": "app\\dashboard\\login\\page.tsx",
       "accessCount": 4,
       "lastAccessed": 1776360795221,
+      "type": "file"
+    },
+    {
+      "path": "app\\api\\auth\\login\\route.ts",
+      "accessCount": 4,
+      "lastAccessed": 1776364916739,
       "type": "file"
     },
     {
@@ -206,6 +218,12 @@
       "type": "file"
     },
     {
+      "path": "app\\dashboard\\auth-wrapper.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1776364977094,
+      "type": "file"
+    },
+    {
       "path": "scripts\\test-fboc-aeo.ts",
       "accessCount": 2,
       "lastAccessed": 1776358946399,
@@ -218,15 +236,9 @@
       "type": "file"
     },
     {
-      "path": "app\\api\\auth\\login\\route.ts",
+      "path": "app\\page.tsx",
       "accessCount": 2,
-      "lastAccessed": 1776360490258,
-      "type": "file"
-    },
-    {
-      "path": "app\\dashboard\\auth-wrapper.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1776361899521,
+      "lastAccessed": 1776362926531,
       "type": "file"
     },
     {
@@ -305,6 +317,24 @@
       "path": "app\\layout.tsx",
       "accessCount": 1,
       "lastAccessed": 1776361925082,
+      "type": "file"
+    },
+    {
+      "path": "app\\dashboard",
+      "accessCount": 1,
+      "lastAccessed": 1776364034542,
+      "type": "directory"
+    },
+    {
+      "path": "app\\api\\auth\\magic-link\\route.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776364936293,
+      "type": "file"
+    },
+    {
+      "path": "app\\api\\auth\\verify\\route.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776364945034,
       "type": "file"
     }
   ],
