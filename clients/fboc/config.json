@@ -1,0 +1,54 @@
+{
+  "id": "fboc",
+  "name": "French Blooms OC",
+  "url": "https://frenchbloomsoc.com",
+  "industry": "florist",
+  "location": {
+    "city": "Orange County",
+    "state": "CA",
+    "serviceCities": ["Irvine", "Newport Beach", "Costa Mesa", "Laguna Beach", "Huntington Beach", "Anaheim", "Orange"]
+  },
+  "brand": {
+    "colors": { "primary": "#C9A6A6", "secondary": "#8A9E8C", "dark": "#2C2C2C" },
+    "fonts": { "display": "Cormorant Garamond", "body": "Inter" },
+    "voice": "luxury, French-inspired, warm, elegant"
+  },
+  "services": [
+    "Wedding Florals",
+    "Corporate Floral Accounts",
+    "Baby Shower Arrangements",
+    "Event Florals",
+    "Anniversary Flowers",
+    "Office Flower Delivery"
+  ],
+  "targetKeywords": [
+    "florist Orange County",
+    "wedding florist Newport Beach",
+    "corporate florist Irvine",
+    "event florist Orange County CA",
+    "baby shower flowers Irvine",
+    "luxury florist OC",
+    "office flower delivery Orange County"
+  ],
+  "aeoQueries": [
+    "What is the best florist in Orange County?",
+    "Who does wedding flowers in Newport Beach California?",
+    "Best corporate florist in Irvine CA?",
+    "French-style florist Orange County?",
+    "Who delivers flowers to offices in Orange County?",
+    "Best baby shower florist Orange County?",
+    "Luxury event florist near Newport Beach?",
+    "Same day flower delivery Irvine CA?",
+    "Wedding florist recommendation Orange County 2026?",
+    "French floral design Orange County California?"
+  ],
+  "gmb": {
+    "category": "Florist",
+    "additionalCategories": ["Wedding Service", "Event Planning Service"],
+    "priceRange": "$$-$$$"
+  },
+  "owner": {
+    "name": "Jocelyn Janz",
+    "email": "jocelyn@frenchbloomsoc.com"
+  }
+}

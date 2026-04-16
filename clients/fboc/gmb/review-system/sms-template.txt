@@ -1,0 +1,34 @@
+FRENCH BLOOMS OC — SMS REVIEW REQUEST TEMPLATES
+Each template is under 160 characters.
+================================================
+
+TEMPLATE 1: Post-Delivery Ask (send 24 hours after delivery)
+--------------------------------------------------------------
+Hi {name}! Hope your French Blooms arrangement brought joy. 🌸 A quick Google review means the world to us: [REVIEW LINK] — Jocelyn
+
+CHARACTER COUNT: 136 ✓
+
+--------------------------------------------------------------
+
+TEMPLATE 2: 5-Day Follow-Up (send 5 days after delivery, if no review)
+----------------------------------------------------------------------
+Hi {name}, Jocelyn @ French Blooms OC. Still loving your flowers? A 2-min Google review helps us so much: [REVIEW LINK] Thank you! 🌷
+
+CHARACTER COUNT: 137 ✓
+
+--------------------------------------------------------------
+
+TEMPLATE 3: Special Occasion Follow-Up (send after weddings, baby showers, or events)
+--------------------------------------------------------------------------------------
+{name}, it was an honor to design your florals. If we exceeded your expectations, a Google review helps us grow: [REVIEW LINK] 💐 Jocelyn
+
+CHARACTER COUNT: 139 ✓
+
+================================================
+USAGE NOTES:
+- Replace {name} with customer first name token from automation
+- Replace [REVIEW LINK] with the shortened GBP review URL (use bit.ly or similar)
+- Template 3 is triggered by event_type = wedding | baby_shower | event in the webhook payload
+- Templates 1 and 2 are triggered for all delivery types
+- Do NOT send Template 2 or 3 if review_received = true in Supabase
+================================================

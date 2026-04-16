@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"supabase db push --project-ref etzonmhbrmdiwblheesg 2>&1\",\"description\":\"Push schema migration to remote Supabase\"}",
+  "error": "Exit code 1\nUsage:\n  supabase db push [flags]\n\nFlags:\n      --db-url string     Pushes to the database specified by the connection string (must be percent-encoded).\n      --dry-run           Print the migrations that would be applied, but don't actually apply them.\n  -h, --help              help for push\n      --include-all       Include all migrations not found on remote history table.\n      --include-roles     Include custom roles from supabase\\roles.sql.\n      --include-seed      Include seed...",
+  "timestamp": "2026-04-16T14:31:02.444Z",
+  "retry_count": 1
+}
