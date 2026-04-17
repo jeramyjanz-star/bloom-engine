@@ -194,6 +194,12 @@
       "type": "file"
     },
     {
+      "path": "",
+      "accessCount": 10,
+      "lastAccessed": 1776390144373,
+      "type": "directory"
+    },
+    {
       "path": "app\\dashboard\\auth-wrapper.tsx",
       "accessCount": 8,
       "lastAccessed": 1776366769516,
@@ -201,8 +207,38 @@
     },
     {
       "path": "app\\api\\auth\\login\\route.ts",
+      "accessCount": 8,
+      "lastAccessed": 1776390156256,
+      "type": "file"
+    },
+    {
+      "path": "app\\dashboard\\[clientId]\\components\\AEOPanel.tsx",
+      "accessCount": 7,
+      "lastAccessed": 1776369933138,
+      "type": "file"
+    },
+    {
+      "path": "app\\dashboard\\[clientId]\\page.tsx",
+      "accessCount": 6,
+      "lastAccessed": 1776371015619,
+      "type": "file"
+    },
+    {
+      "path": "src\\lib\\supabase.ts",
+      "accessCount": 6,
+      "lastAccessed": 1776390132642,
+      "type": "file"
+    },
+    {
+      "path": "src\\lib\\client-loader.ts",
+      "accessCount": 6,
+      "lastAccessed": 1776390132729,
+      "type": "file"
+    },
+    {
+      "path": "src\\lib\\content-engine.ts",
       "accessCount": 5,
-      "lastAccessed": 1776366734556,
+      "lastAccessed": 1776390096151,
       "type": "file"
     },
     {
@@ -212,15 +248,33 @@
       "type": "file"
     },
     {
+      "path": "app\\api\\[clientId]\\schema\\generate\\route.ts",
+      "accessCount": 4,
+      "lastAccessed": 1776369619884,
+      "type": "file"
+    },
+    {
       "path": "src\\lib\\audit-agent.ts",
-      "accessCount": 3,
-      "lastAccessed": 1776359121585,
+      "accessCount": 4,
+      "lastAccessed": 1776389859389,
       "type": "file"
     },
     {
       "path": "next.config.mjs",
       "accessCount": 3,
       "lastAccessed": 1776362663776,
+      "type": "file"
+    },
+    {
+      "path": "clients\\fboc\\config.json",
+      "accessCount": 3,
+      "lastAccessed": 1776389840506,
+      "type": "file"
+    },
+    {
+      "path": "app\\api\\[clientId]\\aeo\\test-all\\route.ts",
+      "accessCount": 3,
+      "lastAccessed": 1776389873714,
       "type": "file"
     },
     {
@@ -248,57 +302,57 @@
       "type": "file"
     },
     {
+      "path": "scripts\\create-schema.sql",
+      "accessCount": 2,
+      "lastAccessed": 1776369449196,
+      "type": "file"
+    },
+    {
+      "path": "app\\dashboard\\[clientId]\\components\\LaunchChecklistPanel.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1776374472914,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 2,
+      "lastAccessed": 1776389839946,
+      "type": "file"
+    },
+    {
+      "path": "src\\lib\\perplexity-engine.ts",
+      "accessCount": 2,
+      "lastAccessed": 1776389861347,
+      "type": "file"
+    },
+    {
+      "path": "src\\lib\\schema-engine.ts",
+      "accessCount": 2,
+      "lastAccessed": 1776389863244,
+      "type": "file"
+    },
+    {
+      "path": "src\\lib\\templates\\launch-checklist.ts",
+      "accessCount": 2,
+      "lastAccessed": 1776389878735,
+      "type": "file"
+    },
+    {
+      "path": "app\\api\\[clientId]\\content\\generate\\route.ts",
+      "accessCount": 2,
+      "lastAccessed": 1776390111246,
+      "type": "file"
+    },
+    {
       "path": "COMPLETE.md",
       "accessCount": 1,
       "lastAccessed": 1776357245584,
       "type": "file"
     },
     {
-      "path": "src\\lib\\content-engine.ts",
-      "accessCount": 1,
-      "lastAccessed": 1776358715453,
-      "type": "file"
-    },
-    {
-      "path": "src\\lib\\perplexity-engine.ts",
-      "accessCount": 1,
-      "lastAccessed": 1776358716553,
-      "type": "file"
-    },
-    {
       "path": "scripts\\run-audit.ts",
       "accessCount": 1,
       "lastAccessed": 1776358723995,
-      "type": "file"
-    },
-    {
-      "path": "package.json",
-      "accessCount": 1,
-      "lastAccessed": 1776358725098,
-      "type": "file"
-    },
-    {
-      "path": "clients\\fboc\\config.json",
-      "accessCount": 1,
-      "lastAccessed": 1776358725169,
-      "type": "file"
-    },
-    {
-      "path": "src\\lib\\supabase.ts",
-      "accessCount": 1,
-      "lastAccessed": 1776358745143,
-      "type": "file"
-    },
-    {
-      "path": "src\\lib\\client-loader.ts",
-      "accessCount": 1,
-      "lastAccessed": 1776358746101,
-      "type": "file"
-    },
-    {
-      "path": "scripts\\create-schema.sql",
-      "accessCount": 1,
-      "lastAccessed": 1776358908416,
       "type": "file"
     },
     {
@@ -335,6 +389,90 @@
       "path": "app\\api\\auth\\verify\\route.ts",
       "accessCount": 1,
       "lastAccessed": 1776364945034,
+      "type": "file"
+    },
+    {
+      "path": "supabase\\migrations\\20260416000000_bloom_engine_schema.sql",
+      "accessCount": 1,
+      "lastAccessed": 1776369433518,
+      "type": "file"
+    },
+    {
+      "path": "app\\api\\[clientId]\\schema\\validate\\route.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776369434080,
+      "type": "file"
+    },
+    {
+      "path": "scripts\\generate-schema.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776369448242,
+      "type": "file"
+    },
+    {
+      "path": "clients\\fboc\\audit\\report.md",
+      "accessCount": 1,
+      "lastAccessed": 1776370259080,
+      "type": "file"
+    },
+    {
+      "path": "clients\\fboc\\audit\\meta-tags.json",
+      "accessCount": 1,
+      "lastAccessed": 1776370272679,
+      "type": "file"
+    },
+    {
+      "path": "app\\dashboard\\[clientId]\\components\\SEOHealthPanel.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776370954142,
+      "type": "file"
+    },
+    {
+      "path": "app\\api\\[clientId]\\checklist\\route.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776370966159,
+      "type": "file"
+    },
+    {
+      "path": "clients\\fboc\\gmb\\SETUP-NOW.md",
+      "accessCount": 1,
+      "lastAccessed": 1776374337339,
+      "type": "file"
+    },
+    {
+      "path": "clients\\fboc\\gmb\\FIRST-WEEK-POSTS.md",
+      "accessCount": 1,
+      "lastAccessed": 1776374381566,
+      "type": "file"
+    },
+    {
+      "path": "clients\\fboc\\gmb\\PHOTO-SHOT-LIST.md",
+      "accessCount": 1,
+      "lastAccessed": 1776374410748,
+      "type": "file"
+    },
+    {
+      "path": ".env.local",
+      "accessCount": 1,
+      "lastAccessed": 1776389858125,
+      "type": "file"
+    },
+    {
+      "path": "app\\api\\[clientId]\\audit\\run\\route.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776389872826,
+      "type": "file"
+    },
+    {
+      "path": "app\\api\\clients\\route.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776389877499,
+      "type": "file"
+    },
+    {
+      "path": "scripts\\add-client.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776389879332,
       "type": "file"
     }
   ],
