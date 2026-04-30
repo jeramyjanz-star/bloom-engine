@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createHmac } from 'crypto'
-import { Resend } from 'resend'
+import { sendClientEmail } from '@/src/lib/email/client'
 
 function generateToken(email: string, secret: string): string {
   const timestamp = Date.now().toString()
@@ -27,8 +27,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   }
 
   const secret = process.env.BLOOM_ADMIN_PASSWORD
-  const resendKey = process.env.RESEND_API_KEY
-  if (!secret || !resendKey) {
+  if (!secret) {
     return NextResponse.json({ error: 'Server not configured' }, { status: 500 })
   }
 
@@ -36,9 +35,9 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   const baseUrl = request.headers.get('origin') ?? `https://${request.headers.get('host')}`
   const magicUrl = `${baseUrl}/api/auth/verify?token=${token}`
 
-  const resend = new Resend(resendKey)
-  const { error } = await resend.emails.send({
-    from: 'BLOOM ENGINE <alex@xlumenx.com>',
+  // TODO: derive clientId from request context (subdomain/session) when 2nd client onboards
+  const { error } = await sendClientEmail({
+    clientId: 'fboc',
     to: email,
     subject: 'Your BLOOM ENGINE access link',
     html: `

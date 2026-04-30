@@ -1,5 +1,5 @@
 import crypto from 'crypto'
-import { Resend } from 'resend'
+import { sendClientEmail } from '@/src/lib/email/client'
 import type { ClientConfig } from '@/src/lib/client-loader'
 
 // ---------------------------------------------------------------------------
@@ -87,22 +87,12 @@ export function verifyToken(token: string): TokenPayload | null {
 }
 
 // ---------------------------------------------------------------------------
-// Resend client (lazy-initialised)
+// Helpers
 // ---------------------------------------------------------------------------
-
-function getResend(): Resend {
-  const key = process.env.RESEND_API_KEY
-  if (!key) throw new Error('Missing env var: RESEND_API_KEY')
-  return new Resend(key)
-}
 
 function appUrl(): string {
   return (process.env.NEXT_PUBLIC_APP_URL ?? '').replace(/\/$/, '')
 }
-
-// ---------------------------------------------------------------------------
-// Shared HTML shell
-// ---------------------------------------------------------------------------
 
 function htmlShell(bodyContent: string): string {
   return `<!DOCTYPE html>
@@ -166,15 +156,14 @@ export async function sendApprovalEmail(
 
   <div style="font-size:9px; color:#3F3F3F; letter-spacing:0.1em; border-top:1px solid #1A1A1A; padding-top:20px;">
     POWERED BY BLOOM ENGINE &times; ANCHOR<br>
-    If this email was unexpected, contact alex@xlumenx.com
+    Questions? Reply to this email.
   </div>
 </div>`)
 
-  const resend = getResend()
-  await resend.emails.send({
-    from: 'BLOOM ENGINE <alex@xlumenx.com>',
+  // TODO: derive clientId from request context (subdomain/session) when 2nd client onboards
+  await sendClientEmail({
+    clientId,
     to: config.owner.email,
-    cc: 'alex@xlumenx.com',
     subject: `🌿 ${config.name} — Approve Today's Google Post`,
     html,
   })
@@ -215,11 +204,10 @@ export async function sendConfirmationEmail(
   </div>
 </div>`)
 
-  const resend = getResend()
-  await resend.emails.send({
-    from: 'BLOOM ENGINE <alex@xlumenx.com>',
+  // TODO: derive clientId from request context (subdomain/session) when 2nd client onboards
+  await sendClientEmail({
+    clientId,
     to: config.owner.email,
-    cc: 'alex@xlumenx.com',
     subject: `✅ Posted to Google — ${config.name}`,
     html,
   })
@@ -248,11 +236,10 @@ export async function sendSkipConfirmationEmail(
   </div>
 </div>`)
 
-  const resend = getResend()
-  await resend.emails.send({
-    from: 'BLOOM ENGINE <alex@xlumenx.com>',
+  // TODO: derive clientId from request context (subdomain/session) when 2nd client onboards
+  await sendClientEmail({
+    clientId,
     to: config.owner.email,
-    cc: 'alex@xlumenx.com',
     subject: `⏭️ Today's post skipped — ${config.name}`,
     html,
   })
@@ -333,14 +320,14 @@ export async function sendWeeklyReportEmail(
 
   <div style="font-size:9px; color:#3F3F3F; letter-spacing:0.1em; border-top:1px solid #1A1A1A; padding-top:20px;">
     POWERED BY BLOOM ENGINE &times; ANCHOR<br>
-    Automated weekly report — contact alex@xlumenx.com with questions
+    Automated weekly report
   </div>
 </div>`)
 
-  const resend = getResend()
-  await resend.emails.send({
-    from: 'BLOOM ENGINE <alex@xlumenx.com>',
-    to: [config.owner.email, 'alex@xlumenx.com'],
+  // TODO: derive clientId from request context (subdomain/session) when 2nd client onboards
+  await sendClientEmail({
+    clientId,
+    to: config.owner.email,
     subject: `📊 ${config.name} — Weekly Google Performance`,
     html,
   })

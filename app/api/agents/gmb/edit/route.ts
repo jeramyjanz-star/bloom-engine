@@ -162,7 +162,7 @@ export async function GET(request: NextRequest): Promise<Response> {
 
     if (error || !data) {
       console.error('[gmb/edit GET] Supabase fetch error:', error)
-      return errorPage('Could not load the post. Please contact alex@xlumenx.com.')
+      return errorPage('Could not load the post. Please contact jocelyn@frenchbloomsoc.com.')
     }
 
     // content is stored as the full post JSON string
@@ -176,14 +176,14 @@ export async function GET(request: NextRequest): Promise<Response> {
         cta: parsed.cta ?? '',
       }
     } catch {
-      return errorPage('Could not parse post content. Please contact alex@xlumenx.com.')
+      return errorPage('Could not parse post content. Please contact jocelyn@frenchbloomsoc.com.')
     }
 
     // 3. Return the edit form
     return editFormPage(token, postContent)
   } catch (err) {
     console.error('[gmb/edit GET] Unexpected error:', err)
-    return errorPage('An unexpected error occurred. Please contact alex@xlumenx.com.')
+    return errorPage('An unexpected error occurred. Please contact jocelyn@frenchbloomsoc.com.')
   }
 }
 
@@ -226,7 +226,7 @@ export async function POST(request: NextRequest): Promise<Response> {
 
     if (fetchError || !existing) {
       console.error('[gmb/edit POST] Fetch error:', fetchError)
-      return errorPage('Could not load the post. Please contact alex@xlumenx.com.')
+      return errorPage('Could not load the post. Please contact jocelyn@frenchbloomsoc.com.')
     }
 
     let existingParsed: Record<string, unknown> = {}
@@ -258,7 +258,7 @@ export async function POST(request: NextRequest): Promise<Response> {
 
     if (updateError) {
       console.error('[gmb/edit POST] Update error:', updateError)
-      return errorPage('Failed to save your edits. Please contact alex@xlumenx.com.')
+      return errorPage('Failed to save your edits. Please contact jocelyn@frenchbloomsoc.com.')
     }
 
     // 5. Re-send approval email with updated content
@@ -269,6 +269,6 @@ export async function POST(request: NextRequest): Promise<Response> {
     return updatedPage()
   } catch (err) {
     console.error('[gmb/edit POST] Unexpected error:', err)
-    return errorPage('An unexpected error occurred. Please contact alex@xlumenx.com.')
+    return errorPage('An unexpected error occurred. Please contact jocelyn@frenchbloomsoc.com.')
   }
 }

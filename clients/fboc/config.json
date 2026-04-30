@@ -50,5 +50,12 @@
   "owner": {
     "name": "Jocelyn Janz",
     "email": "jocelyn@frenchbloomsoc.com"
+  },
+  "email": {
+    "fromName": "Jocelyn — French Blooms OC",
+    "fromAddress": "jocelyn@frenchbloomsoc.com",
+    "replyTo": "jocelyn@frenchbloomsoc.com",
+    "bcc": "hello@frenchbloomsoc.com",
+    "domain": "frenchbloomsoc.com"
   }
 }

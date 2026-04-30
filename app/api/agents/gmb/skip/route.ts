@@ -91,7 +91,7 @@ export async function GET(request: NextRequest): Promise<Response> {
 
     if (error) {
       console.error('[gmb/skip] Supabase update error:', error)
-      return errorPage('Something went wrong. Please contact alex@xlumenx.com.')
+      return errorPage('Something went wrong. Please contact jocelyn@frenchbloomsoc.com.')
     }
 
     // 4. Send skip confirmation email
@@ -101,6 +101,6 @@ export async function GET(request: NextRequest): Promise<Response> {
     return skippedPage()
   } catch (err) {
     console.error('[gmb/skip] Unexpected error:', err)
-    return errorPage('An unexpected error occurred. Please contact alex@xlumenx.com.')
+    return errorPage('An unexpected error occurred. Please contact jocelyn@frenchbloomsoc.com.')
   }
 }

@@ -102,7 +102,7 @@ export async function GET(request: NextRequest): Promise<Response> {
   if (!gmbClientId || !gmbClientSecret) {
     return errorPage(
       'Server Configuration Error',
-      'GMB_CLIENT_ID or GMB_CLIENT_SECRET is not set. Contact alex@xlumenx.com.'
+      'GMB_CLIENT_ID or GMB_CLIENT_SECRET is not set. Contact jocelyn@frenchbloomsoc.com.'
     )
   }
 
@@ -232,7 +232,7 @@ export async function GET(request: NextRequest): Promise<Response> {
 
   <div style="font-size:9px;color:#3F3F3F;letter-spacing:0.1em;border-top:1px solid #1A1A1A;padding-top:20px;">
     POWERED BY BLOOM ENGINE &times; ANCHOR<br>
-    Contact alex@xlumenx.com if you have questions
+    Contact jocelyn@frenchbloomsoc.com if you have questions
   </div>
 </div>`)
 }

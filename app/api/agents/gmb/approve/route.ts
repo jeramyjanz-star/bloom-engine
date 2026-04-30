@@ -92,7 +92,7 @@ export async function GET(request: NextRequest): Promise<Response> {
 
     if (error) {
       console.error('[gmb/approve] Supabase update error:', error)
-      return errorPage('Something went wrong saving your approval. Please contact alex@xlumenx.com.')
+      return errorPage('Something went wrong saving your approval. Please contact jocelyn@frenchbloomsoc.com.')
     }
 
     // 4. Fire-and-forget: trigger the actual GMB post
@@ -109,6 +109,6 @@ export async function GET(request: NextRequest): Promise<Response> {
     return successPage()
   } catch (err) {
     console.error('[gmb/approve] Unexpected error:', err)
-    return errorPage('An unexpected error occurred. Please contact alex@xlumenx.com.')
+    return errorPage('An unexpected error occurred. Please contact jocelyn@frenchbloomsoc.com.')
   }
 }
