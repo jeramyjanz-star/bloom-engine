@@ -17,12 +17,23 @@ Google Business Profile management, and content generation — deployed per busi
 - Playwright (SEO crawling)
 - Vercel deployment
 
-## Quick Start
+## Local Development
+
+All secrets are managed via Doppler. Do not create a `.env.local` file — use Doppler instead.
+
 ```bash
 git clone https://github.com/jeramyjanz-star/bloom-engine
 cd bloom-engine
-doppler run --project anchor-lumen --config prd -- npm run dev
+npm install
+doppler run --project anchor-bloom-engine --config prd -- npm run dev
 ```
+
+To pull secrets to a local file (gitignored):
+```bash
+doppler secrets download --project anchor-bloom-engine --config prd --format env --no-file > .env.local
+```
+
+See `.env.local.example` for all required variables.
 
 ## Adding a New Client
 ```bash
